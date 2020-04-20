@@ -1,0 +1,21 @@
+<html>
+ <head>
+	<meta charset="UTF-8">
+	<title>Teste Data e Hora</title>
+ </head>
+	<script>
+		function time() {
+			now = new Date();
+			hora = now.getHours();
+			min = now.getMinutes();
+			seg = now.getSeconds();
+			diaSemana = new Array ("domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado");
+			nomeMes = new Array ("janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro");
+			document.getElementById('texto').innerHTML = "Hoje é " + diaSemana[now.getDay()] + ", " + now.getDate() + " de " + nomeMes[now.getMonth()] +" de " + now.getFullYear() + " | " + hora + ":" + min + ":" + seg;
+			setTimeout('time()', 500);
+		}
+	</script>
+ <body onload="time()">
+	<div id="texto"></div>
+ </body>
+ </html>
